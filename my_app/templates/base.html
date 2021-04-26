@@ -14,19 +14,19 @@
     <div class="container nav-wrapper">
         <a href="/" class="brand-logo">Craiglist List</a>
         <ul id="nav-mobile" class="right">
-            <li><a href="/">Home</a></li>
+            <li><a href="/">Home 🌶️</a></li>
         </ul>
     </div>
 </nav>
 
 <div class="container">
-    <h1 style="text-align: center">What do you want to search for on Craiglist List?</h1>
+    <h1 style="text-align: center">What do you want to search for on Craiglist List? 🚀</h1>
     <div class="row">
         <div class="col s4">
             <!-- Promo Content 1 goes here -->
             <div class="center">
                 <i class="large material-icons" style="color: #EE6E73">flash_on</i>
-                <p>Fast craigslist web scraper</p>
+                <p>Fast craigslist web scraper ⏩</p>
                 <p class="light center">Scrape away right here with a beautiful GUI.</p>
             </div>
         </div>
@@ -35,7 +35,7 @@
             <!-- Promo Content 2 goes here -->
             <div class="center">
                 <i class="large material-icons" style="color: orange">camera</i>
-                <p>Filter your searches</p>
+                <p>Filter your searches 🕵️‍♂️</p>
                 <p class="light center">We built in functionality to filter based on pricing.</p>
             </div>
         </div>
@@ -51,8 +51,23 @@
     </div>
 
 
+    <form{# action=" {% url 'new_search' %}" #} method="post">
+         {% csrf_token %}
+        <input type="text" name="search" placeholder="search">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+        </button>
+    </form>
 
+{#Do not repeat yourself #}
+    {% block content %}
 
-
+    {% endblock content %}
 
 </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
