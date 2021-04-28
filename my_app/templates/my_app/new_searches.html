@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2 style="text-align: center">{{ search | title }} 🕵️‍♂️</h2>
+    <h2 style="text-align: center">{{ search | title }}</h2>
+
     <div class="row">
         {% for post in final_postings %}
             <div class="col s4">
@@ -13,7 +14,7 @@
                         <p>{{ post.0 }}</p>
                     </div>
                     <div class="card-action">
-                        <a href="{{ post.1 }}">View listing: Price {{ post.2 }} 🤑</a>
+                        <a href="{{ post.1 }}">View listing: Price {{ post.2 }}</a>
                     </div>
                 </div>
             </div>
